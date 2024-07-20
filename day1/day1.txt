@@ -1,0 +1,255 @@
+magical or not
+METHOD 1:
+
+n=int(input("enter num:"))
+sum=0
+while n>0:
+    sum+=n%10
+    n=n//10
+    pro=pro*sum
+print(pro)        
+ 
+METHOD 2:
+n=12345
+if(n%9==1):
+    print('num is magical')
+else:
+    print('num is not magical')    
+
+===================================
+sum of digit
+
+s=input()
+
+sum=0
+for i  in range(0,len(s)):
+    if s[i].isdigit():
+        sum+=int(s[i])
+print(sum)
+
+o/p=ab12c
+3
+=========================================
+sum of digits in a string:
+
+s=input()
+
+count=0
+for i  in range(0,len(s)):
+    if s[i].isdigit():
+        count+=1
+print(count)
+
+o/p=ab12c
+2
+==================================================
+palindrome using slicing
+
+def isPalindrome(s):
+    return s ==s[::-1]
+s="malayalam"
+n=isPalindrome(s)
+if n:
+    print("yes")
+else:
+    print("no")
+==============================================
+palindrome using for,if
+
+s='python'
+s1=''
+for i in range(len(s)-1,-1,-1):
+    s1+=s[i]
+
+if(s1==s):
+    print("palindrome") 
+else:
+    print("not palindrome")       
+
+==================================================
+no of vowels in a given string 
+
+S="srivani"
+
+vowels=['a','e','i','o','u']
+count=0
+for c in S:
+    if c in vowels:
+        count+=1
+print(count)
+
+o/p=3
+==============================================
+no of consonants in a given string
+
+s='srivanE'
+vowels='aeiouAEIOU'
+count=0
+for c in s:
+    if c not in vowels:
+        print(c)
+        count+=1
+print(count)       
+
+
+o/p=
+s
+r
+v
+n
+4
+
+========================================
+membership operator=in,notin
+
+data=['1','2','apple','carrot','mango']
+fruits=['apple','orange','mango']
+for i in data:
+    if i in fruits:
+        print(i)
+=====================================
+data=['1','2','apple','carrot','mango']
+fruits=['apple','orange','mango']
+vegies=['carrot','brinjal']
+for i in data:
+    if i  not in fruits and i in vegies:
+
+        print(i)
+=====================================
+split function
+
+s='iam playing crikent and iam playing khokho'
+s=s.split()
+print(s.count('playing'))
+o/p=2
+
+===========================================================
+even or odd using functions:-
+
+def num(n):
+    if n%2==0:
+        return"True"
+    else:
+        return"False"
+print(num(12))       
+==========================
+another method for even or odd:-
+
+def num(n):
+    if 1&n==0:
+        return"True"
+    else:
+        return"False"
+print(num(12))
+o/p=True
+=======================================
+print the count of the numbers divisible by both 4 and 6
+
+def check(arr):
+    count=0
+    for i in arr:
+        if i%4==0 and i%6==0:
+            print(i,end=' ')
+            count+=1
+    return count
+arr=[1,36,9,24,4,2,12]
+print('the count is:',check(arr)) 
+==========================================
+input by user:
+def check(arr):
+    count=0
+    for i in arr:
+        if i%4==0 and i%6==0:
+            print(i,end=' ')
+            count+=1
+    return count
+arr=list(map(int,input().split()))
+print('the count is:',check(arr)
+    ===================================================
+print reverse of given string      
+def check(s):
+    s=s.split()
+    rev=' '
+    for i in s:
+        rev=rev+i[::-1]
+    print(type(rev))
+    return rev
+s='sridevi womens engineering college'
+print(check(s))
+
+O/P:<type 'string>
+egelloc gnireenigne snemow ivedirs
+
+===============================================
+fabonicci series:
+
+def check(n):
+    first=0
+    second=1
+    print(first,second,end=' ')
+    count=2
+    while count<n:
+        third=first+second
+        print(third,end=' ')
+        first=second
+        second=third
+        count+=1
+check(10)        
+    
+o/p:0 1 1 2 3 5 8 13 21 34 
+
+======================================================
+#sum of digits until it becomes 0
+#n=12345
+#f=123(odd =half+1)
+#s=45
+def check(ele):
+    return ele%2==0
+
+def increment(arr):
+        count=0
+        for i  in arr:
+            if check(i):
+                print(i)
+                count+=1
+        return count
+arr=[5,9,12,6,17,3]
+print(increment(arr))   
+
+o/p=
+12
+6
+2
+     
+
+
+#54123(only reverse of s)
+===================================================
+function within the function
+
+def check(n):
+    n=str(n)
+    return len(n)>1 and n==n[::-1]
+
+def increment(N):
+    count=0
+    for i  in range(1,N+1):
+        if check(i):
+           print(i)
+           count+=1
+    return count
+N=50        
+print(increment(N))     
+
+o/p=
+11
+22
+33
+44
+4
+
+
+        
+
+
+ 
