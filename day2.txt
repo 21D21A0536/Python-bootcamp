@@ -1,0 +1,187 @@
+list is a collection of ordered elements
+->list is mutable data structure(we can make some changes)
+SYNTAX=
+LIST_NAME=[OBJ1,OBJ2,OBJ3....OBJN]
+OPERATION ON LIST:-
+update
+fruits=['apple','banana','orange','pineapple']
+fruits[1]='berries'
+print(fruits)
+
+=====================
+printing the values of list with numbers aside
+
+fruits=['apple','banana','orange','pineapple']
+count=1
+for ele in fruits:
+    print(count,ele)
+    count+=1
+
+o/p=
+1 apple
+2 banana
+3 orange
+4 pineapple
+
+===============================
+reversing the values which are even:
+
+fruits=['apple','banana','orange','pineapple']
+for i in range(0,len(fruits)):
+    if i%2==0:
+        rev=fruits[i]
+        print(rev[::-1])
+    else:    
+        print(fruits[i])
+
+o/p=
+
+elppa
+banana
+egnaro
+pineapple
+
+==========================================
+i/p=[1,2,3,4,5]
+o/p=[5,4,1,2,3]
+
+arr=[1,2,3,4,5]
+k=2
+#5,4,1,2,3
+first=arr[k+2:k:-1]
+second=arr[:k+1]
+print(first+second)
+
+
+===================================================
+tuples=tuples are immutable.
+so,we cannot make changes in tuples instead we can modify tuples to list and can make the changes
+
+student=('sri','sridevi',101)
+student=list(student)
+student[2]='ece'
+print(student)
+
+o/p=['sri', 'sridevi', 'ece']
+
+
+
+======================================================
+ count the freq of each num;
+
+arr=[1,3,6,5,3,7,5,1]
+d={}
+for key in arr:
+    if key not in d:
+        d[key]=1
+    else:
+        d[key]+=1
+print(d)            
+
+{1: 2, 3: 2, 6: 1, 5: 2, 7: 1}
+
+===============================
+count of repeating nums:
+arr=[1,3,6,5,3,7,5,1]
+d={}
+for key in arr:
+    if key not in d:
+        d[key]=1
+    else:
+        d[key]+=1  
+for num,count in d.items():
+    if count==1:
+        print(num)
+=============================================
+cong={7:5,18:22,32:8,71:5,66:6}
+bjp={7:15,18:20,32:4,71:9,66:2}
+sum1=0
+sum2=0
+for key,value in cong.items():
+    if(key>=18):
+        sum1+=value
+for key,value in bjp.items():
+    if(key>=18):
+        sum2+=value
+if(sum1>sum2):
+    print(f"congress wins by {sum1-sum2} votes")
+else:
+    print(f"bjp wins by {sum2-sum1} votes")   
+print(sum1,sum2)     
+
+o/p=
+congress wins by 6 votes
+41 35
+=======================================================
+factorial of given num:
+
+def fact(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*fact(n-1)
+
+n=int(input())
+print(fact(n))   
+     
+=============================================
+sum of natural nums
+
+def sum_of_natural(n):
+    if n==1:
+        return 1
+    else:
+        return n+sum_of_natural(n-1)
+print(sum_of_natural(5)) 
+
+ö/p=15
+===============================
+
+def fib(n):
+    if(n==0 or n==1):
+        return n
+    else:
+        return fib(n-1)+fib(n-2)
+
+print(fib(5)) 
+
+o/p=15
+
+============================
+bug/error/exception
+
+exceptional handling in python
+
+try,except,else,finally
+==================================
+try:
+    a=10
+    b=0
+    c=(a/b)
+    print(c)
+except Exception:
+    print("divide by zero is not possible")
+    n1=100
+    n2=200
+    print(n1+n2)
+    a1=1000
+    a2=2000   
+o/p:
+divide by zero is not possible
+300
+============================
+n=1000
+
+2,4,8
+248
+284
+428
+482
+824
+842
+use one digit atleast once
+so that all the digits has to be used that number of times
+
+                      
+
+
