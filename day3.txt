@@ -1,0 +1,258 @@
+CLASS
+class is a blueprint of an object
+class is a logical entity
+class contains functions, constructor,data
+
+OBJECT
+object is a real world entity,physical entity
+object is a instance of class
+object is a sub part of classidentity
+object contains properties,behaviour,identities
+
+CONSTRUCTOR
+It is a special method,it is used to invoke the instance variables
+it doesn't return any value
+while creating the object constructor will call implicitly
+3 types of constructor
+default constructor
+parameterized constructor
+non parameterized constructor
+=============================================
+STATIC
+static is used for memory maganement i.e. to reduce the space
+class Employee: 
+  field="testing"
+  def __init__(self,name,empno,salary):
+    self.name=name
+    self.empno=empno
+    self.salary=salary
+
+  def display(self):
+    print("name is:",self.name)
+    print("field is:",Employee.field)   
+    print("emp no is:",self.empno)
+    print("salary is:",self.salary) 
+
+e1=Employee("sri",140,10000 ) 
+e1.display()  
+o/p
+
+name is: sri
+field is: testing
+emp no is: 140
+salary is: 10000
+
+========================================================
+F strings
+
+class Employee: 
+
+  def __init__(self,name,empno,salary):
+    self.name=name
+    self.empno=empno
+    self.salary=salary
+
+  def __str__(self):
+    return f'{self.name} {self.empno} {self.salary} '
+
+e1=Employee("sri",140,10000 ) 
+print(e1) 
+o/p
+sri 140 10000 
+
+
+==============================================================
+INHERETENCE
+
+class mobile:
+    def power_button():
+        print("power button is used for on/off")
+    def call_operation():
+        print("it is used for calling") 
+    def text_operation():
+        print("it is used for texting")       
+class iphone(mobile):
+    def air_drop():
+        print("sending doc,pics")
+mobj=iphone
+mobj.call_operation()
+      
+
+=================================
+class mobile:
+    def power_button():
+        print("power button is used for on/off")
+    def call_operation():
+        print("it is used for calling") 
+    def text_operation():
+        print("it is used for texting")       
+class iphone(mobile):
+    def air_drop():
+        print("sending doc,pics")
+mobj=iphone
+mobj.call_operation()
+mobj.air_drop()
+      
+it is used for calling
+sending doc,pics
+
+==================================
+from abc import ABC
+
+fobj=xxx
+fobj.aaaa
+==========================
+
+ENCAPSULATION:-
+binding data and methodsin o the single component 
+
+example
+class is the best example for encapsulation
+
+advantages:-
+code integration,security
+
+access modifiers:-
+
+public
+private
+protected
+==============================
+access modiifiers
+
+class Employee:
+    def __init__(self,name,role,salary):
+        self.name=name
+        self.role=role
+        self.__salary=salary      #private data
+
+    def get_salary(self):
+       return self.__salary
+
+
+    def Empdisplay(self):
+       print(self.name,self.role)
+class Company(Employee):
+    def __init__(self,cname,loc):
+       self.cname=cname
+       self.loc=loc 
+
+    def Comdisplay(self):
+       print(self.cname,self.loc) 
+
+    def _hiring(self):
+       print('hiring for the manager role')     
+
+cobj=Company('wipro','gachibowli')
+eobj=Employee('srivani','mitty',100000)
+eobj.Empdisplay()
+print(cobj._hiring())
+
+o/p:-
+srivani mitty
+hiring for the manager role
+None
+
+====================================================
+polymorphism
+
+
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+    def __str__(self):
+        return f"{self.name}, {self.age}"
+
+class Student(Person):
+    def __init__(self,name,age,roll,branch):
+        super().__init__(name,age)
+        self.roll=roll
+        self.branch=branch
+
+    def __str__(self):
+        perdetails=super().__str__()
+        return f"{perdetails},{self.roll},{self.branch}" 
+class AnnualDay(Student):
+    def __init__(self,name,age,roll,branch,program):
+        super().__init__(name,age,roll,branch)
+        self.program=program
+
+    def __str__(self):
+        studetails=super().__str__()
+        return f'{studetails} , {self.program}'  
+
+aobj=AnnualDay('srivani',21,27,'CSE','solo')      
+print(aobj)
+
+o/p
+srivani, 21,27,CSE , solo
+
+=====================================
+alice[10,3,6]
+
+bob=[12,3,4]
+
+a,b=0,0
+b=1
+a=1
+return who wins
+
+a = [10,3,6]
+b = [12,3,4]
+def compare(a,b):
+    alice_score,bob_score=0,0
+    for i in range(3):
+        if a[i]>b[i]:
+            alice_score+=1
+        elif a[i]<b[i]:
+            bob_score+=1
+        else:
+            continue
+    return alice_score,bob_score  
+print( compare(a,b) )
+            
+O/P:-(1,1)
+=========================================
+password validation:
+
+s='Excellence@123'
+len>8
+1 cap 
+1 small 
+1 digit
+1 special 
+
+def validate_password(password):
+    if len(password)  < 8:
+        return False
+    
+    upper=False
+    lower=False
+    special=False
+    digit=False
+
+    special='!~@#$%&^*(_)+=/.,'
+    for character in password:
+        if character.isdigit():
+           digit=True
+        if character.isupper():
+           upper=True
+        if character.islower():
+           lower=True
+        if special in password:
+           special=True
+    return upper and lower and special and digit
+
+print(validate_password('Abc7sdc 5@'))          
+ O/P:-True
+
+  
+
+
+
+
+
+
+
